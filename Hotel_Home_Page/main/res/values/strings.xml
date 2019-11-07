@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Happy Birthday</string>
+    <string name="greeting">Merry Christmas To All</string>
+    <string name="desc">Lodge Image</string>
+    <string name="lodge_name">Maa Sarada Lodge</string>
+    <string name="contact">Contact: 8910414590</string>
+    <string name="address">Pradhan Nagar near Margaret School by Lane</string>
+    <string name="description"> Good lodging facility with clean and well maintained rooms for your ease of stay.</string>
+    <string name="operation_hours">Mon-Sun{Open 24X7}</string>
+    <string name="button_text">Book a Room</string>
+</resources>
