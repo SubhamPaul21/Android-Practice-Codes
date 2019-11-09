@@ -10,91 +10,107 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
-        android:layout_marginLeft="26dp"
         android:layout_marginBottom="40dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:textSize="20sp"
-            android:text="Team A" />
+            android:text="Team A"
+            android:textSize="20sp" />
 
         <TextView
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:text="Team B" />
+            android:text="Team B"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="50dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/team_a_score"
-            android:layout_width="180dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:textSize="60sp"
             android:textColor="#000000"
-            android:gravity="center"
-            android:text="Score of A" />
+            android:gravity="center_horizontal"
+            android:text="@string/zero" />
 
         <TextView
             android:id="@+id/team_b_score"
-            android:layout_width="180dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:textSize="60sp"
             android:textColor="#000000"
-            android:gravity="center"
-            android:text="Score of B" />
+            android:gravity="center_horizontal"
+            android:text="@string/zero" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
-        android:layout_marginLeft="26dp"
         android:layout_marginBottom="50dp"
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:layout_marginStart="45dp"
-            android:layout_marginLeft="45dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
             android:gravity="center"
             android:textAllCaps="true"
             android:paddingBottom="5dp"
             style="@android:style/ButtonBar"
+            android:onClick="plusThreePointsA"
             android:text="@string/three" />
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
             android:gravity="center"
             android:textAllCaps="true"
             android:paddingBottom="5dp"
             style="@android:style/ButtonBar"
+            android:onClick="plusThreePointsB"
             android:text="@string/three" />
 
     </LinearLayout>
@@ -102,35 +118,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
-        android:layout_marginLeft="26dp"
         android:layout_marginBottom="50dp"
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:layout_marginStart="45dp"
-            android:layout_marginLeft="45dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
             android:gravity="center"
             android:textAllCaps="true"
             android:paddingBottom="5dp"
             style="@android:style/ButtonBar"
+            android:onClick="plusTwoPointsA"
             android:text="@string/two" />
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
             android:gravity="center"
             android:textAllCaps="true"
             android:paddingBottom="5dp"
             style="@android:style/ButtonBar"
+            android:onClick="plusTwoPointsB"
             android:text="@string/two" />
 
     </LinearLayout>
@@ -138,35 +158,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginRight="26dp"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="50dp"
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:layout_marginStart="45dp"
-            android:layout_marginLeft="45dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
             android:gravity="center"
             android:textAllCaps="true"
             android:paddingBottom="5dp"
             style="@android:style/ButtonBar"
+            android:onClick="plusOnePointsA"
             android:text="@string/free" />
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
             android:gravity="center"
             android:textAllCaps="true"
             android:paddingBottom="5dp"
             style="@android:style/ButtonBar"
+            android:onClick="plusOnePointsB"
             android:text="@string/free" />
 
     </LinearLayout>
@@ -174,11 +198,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
+        android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
         android:textAllCaps="true"
         android:paddingBottom="5dp"
         style="@android:style/ButtonBar"
+        android:onClick="resetAll"
         android:text="@string/reset" />
 
 </LinearLayout>
