@@ -2,7 +2,9 @@ package com.example.justjava;
 
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price = quantity * 5;
-        String priceMessage = "Total Rs." + price + " for " + quantity + " cups of coffee. \nThank you";
-        displayMessage(priceMessage);
+        int price = calculatePrice();
+        String bill = createOrderSummary(price);
+        displayMessage(bill);
     }
 
     /**
@@ -37,23 +39,43 @@ public class MainActivity extends AppCompatActivity {
      */
     private void display(int number) {
         TextView quantityTextView = findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(number);
     }
 
     /**
-     * This method displays the given price on the screen.
+     * This method creates a summary of the order i.e. bill
      */
-    private void displayPrice(int number) {
-        TextView priceTextView = findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    private String createOrderSummary(int price) {
+        String message = "Name: Subham Paul";
+        message += "\n Add whipped cream? " + isWhippedCreamChecked();
+        message += "\n Quantity: " + quantity;
+        message += "\n Total: Rs. " + price;
+        message += "\n Thank you.";
+        return message;
+    }
+
+    /**
+     *  This method is used to know if whipped cream checkbox is checked or not
+     */
+    private boolean isWhippedCreamChecked() {
+        CheckBox checkBox = findViewById(R.id.check_whipped_cream_box);
+        Log.i("MainActivity.java", String.valueOf(checkBox.isChecked()));
+        return checkBox.isChecked();
+    }
+
+    /**
+     *  This method returns the price of order being placed.
+     */
+    private int calculatePrice() {
+        return quantity * 5;
     }
 
     /**
      * This method displays the given string output on the screen
      */
     private void displayMessage(String message) {
-        TextView priceTextView = findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView orderSummaryTextView = findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(message);
     }
 
     /**
