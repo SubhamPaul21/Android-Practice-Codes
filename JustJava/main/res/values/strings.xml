@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Just Java</string>
     <string name="quantity">QUANTITY</string>
-    <string name="quantity_value">0</string>
+    <string name="quantity_value">1</string>
     <string name="button_value">Order</string>
     <string name="order_summary">Order Summary</string>
     <string name="topping">Toppings</string>
     <string name="whipped_cream">Whipped cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="enter_name">Enter your Name</string>
 </resources>
