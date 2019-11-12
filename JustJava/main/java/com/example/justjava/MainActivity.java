@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
-     *
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
@@ -97,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             basePrice += 1;
         }
         if (isChocolateChecked()) {
-          basePrice += 2;
+            basePrice += 2;
         }
         return basePrice * quantity;
     }
@@ -143,17 +141,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     *  This method retrieves the name of the user inserted into the EditText View
+     */
+    private String getEmail() {
+        EditText userEmailId = findViewById(R.id.user_email_text_input);
+        return userEmailId.getText().toString();
+    }
+
+    /**
      *  This method sends an Intent activity to the Gmail app to send the order summary to user via mail
      */
     public void composeEmail(String bill_summary) {
         String userName = getName();
+        String userEmailId = getEmail();
         Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:")); //only email apps should handle this
+        intent.setData(Uri.parse("mailto:" + userEmailId)); //only email apps should handle this
         intent.putExtra(Intent.EXTRA_SUBJECT, "Order summary of coffee order for " + userName);
         intent.putExtra(Intent.EXTRA_TEXT, bill_summary);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
     }
-
 }
