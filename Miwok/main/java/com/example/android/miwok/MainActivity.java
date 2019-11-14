@@ -18,7 +18,6 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-//import android.support.v7.app.AppCompatActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,23 +31,40 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void openPhrasesActivity(View view) {
-        Intent phrasesActivity = new Intent(this, PhrasesActivity.class);
-        startActivity(phrasesActivity);
-    }
-
+    /**
+     * This method opens up the Number Activity in the app
+     * @param view
+     */
     public void openNumberActivity(View view) {
-        Intent numberActivity = new Intent(this, NumbersActivity.class);
-        startActivity(numberActivity);
+        Intent numberActivityIntent = new Intent(this, NumbersActivity.class);
+        startActivity(numberActivityIntent);
     }
 
+    /**
+     * This method opens up the Family Activity in the app
+     * @param view
+     */
     public void openFamilyActivity(View view) {
-        Intent familyActivity = new Intent(this, FamilyActivity.class);
-        startActivity(familyActivity);
+        Intent familyActivityIntent = new Intent(this, FamilyActivity.class);
+        startActivity(familyActivityIntent);
     }
 
-    public void openColorsActivity(View view) {
-        Intent colorsActivity = new Intent(this, ColorsActivity.class);
-        startActivity(colorsActivity);
+    /**
+     * This method opens up the Phrases Activity in the app
+     * @param view
+     */
+    public void openPhrasesActivity(View view) {
+        Intent phrasesActivityIntent = new Intent(this, PhrasesActivity.class);
+        startActivity(phrasesActivityIntent);
     }
+
+    /**
+     * This method opens up the Colors Activity in the app
+     * @param view
+     */
+    public void openColorsActivity(View view) {
+        Intent colorsActivityIntent = new Intent(this, ColorsActivity.class);
+        startActivity(colorsActivityIntent);
+    }
+
 }
