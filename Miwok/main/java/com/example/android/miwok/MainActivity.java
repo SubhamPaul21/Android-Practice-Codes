@@ -18,8 +18,11 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,42 +32,57 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
-    }
 
-    /**
-     * This method opens up the Number Activity in the app
-     * @param view
-     */
-    public void openNumberActivity(View view) {
-        Intent numberActivityIntent = new Intent(this, NumbersActivity.class);
-        startActivity(numberActivityIntent);
-    }
+        // Get the Phrases TextView by id
+        TextView phrases = findViewById(R.id.phrases_activity);
 
-    /**
-     * This method opens up the Family Activity in the app
-     * @param view
-     */
-    public void openFamilyActivity(View view) {
-        Intent familyActivityIntent = new Intent(this, FamilyActivity.class);
-        startActivity(familyActivityIntent);
-    }
+        // Add Click Listener for Phrases TextView
+        phrases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Opening the Phrases Activity Menu", Toast.LENGTH_SHORT).show();
+                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(phrasesIntent);
+            }
+        });
 
-    /**
-     * This method opens up the Phrases Activity in the app
-     * @param view
-     */
-    public void openPhrasesActivity(View view) {
-        Intent phrasesActivityIntent = new Intent(this, PhrasesActivity.class);
-        startActivity(phrasesActivityIntent);
-    }
+        //  Get the Numbers TextView by id
+        TextView numbers = findViewById(R.id.numbers_activity);
 
-    /**
-     * This method opens up the Colors Activity in the app
-     * @param view
-     */
-    public void openColorsActivity(View view) {
-        Intent colorsActivityIntent = new Intent(this, ColorsActivity.class);
-        startActivity(colorsActivityIntent);
-    }
+        //  Add Click Listener for Numbers TextView
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Opening the Numbers Activity Menu", Toast.LENGTH_SHORT).show();
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(numbersIntent);
+            }
+        });
 
+        //  Get the Family TextView by id
+        TextView family = findViewById(R.id.family_activity);
+
+        //Add Click Listener for Family TextView
+        family.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Opening the Family Activity Menu", Toast.LENGTH_SHORT).show();
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                startActivity(familyIntent);
+            }
+        });
+
+        //  Get the Colors TextView by id
+        TextView colors = findViewById(R.id.colors_activity);
+
+        //Add Click Listener for Colors TextView
+        colors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Opening the Colors Activity Menu", Toast.LENGTH_SHORT).show();
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(colorsIntent);
+            }
+        });
+    }
 }
