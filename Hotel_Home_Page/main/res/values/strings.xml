@@ -8,4 +8,7 @@
     <string name="description"> Good lodging facility with clean and well maintained rooms for your ease of stay.</string>
     <string name="operation_hours">Mon-Sun{Open 24X7}</string>
     <string name="button_text">Book a Room</string>
+    <string name="app_title">Awesome Music Player</string>
+    <string name="status_play">Playing the song</string>
+    <string name="status_pause">Paused the song</string>
 </resources>
