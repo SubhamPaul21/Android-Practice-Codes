@@ -45,6 +45,18 @@ public class Word {
         this.mImageResourceId = imageResourceId;
     }
 
+    /**
+     * Creating the constructor of the Word Class with the Image Resource Id
+     * @param englishWord is the english translation of the word
+     * @param miwokWord is the miwok translation of the word
+     * @param audioResourceId is the raw audio resource Id of the corresponding Audio
+     */
+    public Word(int audioResourceId, String englishWord, String miwokWord) {
+        this.mAudioResourceId = audioResourceId;
+        this.mEnglishWord = englishWord;
+        this.mMiwokWord = miwokWord;
+    }
+
     //  Getting the Default Translation of the word
     public String getEnglishTranslation() {
         return mEnglishWord;

@@ -18,7 +18,6 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter<Word> {
 
     private int mColorResourceId;
-    private MediaPlayer mediaPlayer;
 
     public WordAdapter(Activity context, ArrayList<Word> words, int colorId) { // Custom class Adapter constructor taking context and object list as input acc to our requirement
         super(context,0, words); // Since ArrayAdapter class object is initialized with parameters (context/Activity, resource/ XML file, list of objects), so we initialize super as such.
@@ -43,11 +42,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
         // Get the {@link Word} object located at this position in the list
-        Word currentWord = getItem(position);
-
-        // Create the MediaPlayer class
-        assert currentWord != null;
-        mediaPlayer = MediaPlayer.create(getContext(), currentWord.getAudioResourceID());
+        final Word currentWord = getItem(position);
 
         //Find the Linear Layout Text Views using the id
         LinearLayout linearTextView = listItemView.findViewById(R.id.linear_text_view);
@@ -62,7 +57,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         linearTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer.start();
+                assert currentWord != null;
+                MediaPlayer.create(getContext(), currentWord.getAudioResourceID()).start();
             }
         });
 
@@ -70,6 +66,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView miwokTextView = listItemView.findViewById(R.id.miwok_text_view);
 
         //Get the word from the getter method and set the text to the current TextView
+        assert currentWord != null;
         miwokTextView.setText(currentWord.getMiwokTranslation());
 
         //Find the TextView in the list_word_item.xml layout using the id
