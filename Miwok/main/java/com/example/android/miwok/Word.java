@@ -10,25 +10,15 @@ public class Word {
     private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
-     *  Creating the constructor of the Word Class without the Image Resource Id
-     * @param englishWord is the english translation of the word
-     * @param miwokWord is the miwok translation of the word
-     */
-    public Word(String englishWord, String miwokWord) {
-        this.mEnglishWord = englishWord;
-        this.mMiwokWord = miwokWord;
-    }
-
-    /**
      * Creating the constructor of the Word Class with the Image Resource Id
      * @param englishWord is the english translation of the word
      * @param miwokWord is the miwok translation of the word
-     * @param imageResourceId   is the drawable resource Id of the corresponding Image
+     * @param audioResourceId is the raw audio resource Id of the corresponding Audio
      */
-    public Word(String englishWord, String miwokWord, int imageResourceId) {
+    public Word(String englishWord, String miwokWord, int audioResourceId) {
         this.mEnglishWord = englishWord;
         this.mMiwokWord = miwokWord;
-        this.mImageResourceId = imageResourceId;
+        this.mAudioResourceId = audioResourceId;
     }
 
     /**
@@ -43,18 +33,6 @@ public class Word {
         this.mEnglishWord = englishWord;
         this.mMiwokWord = miwokWord;
         this.mImageResourceId = imageResourceId;
-    }
-
-    /**
-     * Creating the constructor of the Word Class with the Image Resource Id
-     * @param englishWord is the english translation of the word
-     * @param miwokWord is the miwok translation of the word
-     * @param audioResourceId is the raw audio resource Id of the corresponding Audio
-     */
-    public Word(int audioResourceId, String englishWord, String miwokWord) {
-        this.mAudioResourceId = audioResourceId;
-        this.mEnglishWord = englishWord;
-        this.mMiwokWord = miwokWord;
     }
 
     //  Getting the Default Translation of the word

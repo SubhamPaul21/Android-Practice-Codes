@@ -1,7 +1,7 @@
 package com.example.android.miwok;
 
+
 import android.app.Activity;
-import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 
@@ -52,15 +53,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         //Set the background color to the specified color
         linearTextView.setBackgroundColor(color);
-
-        // Set the audio to the specified LinearLayout
-        linearTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                assert currentWord != null;
-                MediaPlayer.create(getContext(), currentWord.getAudioResourceID()).start();
-            }
-        });
 
         //Find the TextView in the list_word_item.xml layout using the id
         TextView miwokTextView = listItemView.findViewById(R.id.miwok_text_view);
