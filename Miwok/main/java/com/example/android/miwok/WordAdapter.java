@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 
@@ -41,7 +43,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
         // Get the {@link Word} object located at this position in the list
-        Word currentWord = getItem(position);
+        final Word currentWord = getItem(position);
 
         //Find the Linear Layout Text Views using the id
         LinearLayout linearTextView = listItemView.findViewById(R.id.linear_text_view);
