@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Obhijaan</string>
+    <string name="contentDescription">Helper Contact Details</string>
+    <string name="name">Name:</string>
+    <string name="number">Number:</string>
+    <string name="address">Address:</string>
+</resources>
