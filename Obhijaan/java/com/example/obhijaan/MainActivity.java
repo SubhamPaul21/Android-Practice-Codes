@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         contacts.add(new Contact("Bikram Aditya Das", "1238524579", "Kolkata Area", R.drawable.boy));
         contacts.add(new Contact("Debmalya Acharjee", "0983497512", "Malda'r Don", R.drawable.boy));
 
-        ContactAdapter itemsAdapter = new ContactAdapter(MainActivity.this, contacts, R.color.tan_background);
+        ContactAdapter itemsAdapter = new ContactAdapter(MainActivity.this, contacts);
 
         ListView listItemView = findViewById(R.id.root_list_view);
         listItemView.setAdapter(itemsAdapter);
@@ -65,5 +65,10 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(MainActivity.this, new String[] {permission}, requestCode);
             Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 }

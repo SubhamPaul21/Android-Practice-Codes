@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -17,11 +18,9 @@ import java.util.ArrayList;
 
 public class ContactAdapter extends ArrayAdapter<Contact> {
 
-    private int mColorResourceId;
 
-    public ContactAdapter(Activity context, ArrayList<Contact> contacts, int colorResourceId) {
+    public ContactAdapter(Activity context, ArrayList<Contact> contacts) {
         super(context, 0, contacts);
-        this.mColorResourceId = colorResourceId;
     }
 
     @NonNull
@@ -36,10 +35,10 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
         final Contact currentWord = getItem(position);
         assert currentWord != null;
 
-        //Set the background color of each item
-        RelativeLayout relativeTextView = listItemView.findViewById(R.id.relative_details_view);
-        int color = ContextCompat.getColor(getContext(), mColorResourceId);
-        relativeTextView.setBackgroundColor(color);
+//        //Set the background color of each item
+//        LinearLayout relativeTextView = listItemView.findViewById(R.id.relative_details_view);
+//        int color = ContextCompat.getColor(getContext(), mColorResourceId);
+//        relativeTextView.setBackgroundColor(color);
 
         // Set the name of the helper
         TextView contactName = listItemView.findViewById(R.id.name_text_view_placeholder);
