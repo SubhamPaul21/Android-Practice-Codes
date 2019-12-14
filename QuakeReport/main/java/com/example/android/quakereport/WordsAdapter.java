@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,10 +13,10 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class WordsAdapter extends ArrayAdapter<Words> {
+public class WordsAdapter extends ArrayAdapter<Earthquake> {
 
-    public WordsAdapter(@NonNull Context context,@NonNull ArrayList<Words> words) {
-        super(context, 0, words);
+    public WordsAdapter(@NonNull Context context,@NonNull ArrayList<Earthquake> earthquakes) {
+        super(context, 0, earthquakes);
     }
 
     @NonNull
@@ -24,10 +25,10 @@ public class WordsAdapter extends ArrayAdapter<Words> {
 
         View listItemView = convertView;
         if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item_list_view,parent,false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item_list_view, parent,false);
         }
 
-        final Words currentWord = getItem(position);
+        final Earthquake currentWord = getItem(position);
 
         // Set magnitude Text
         TextView magnitudeText = listItemView.findViewById(R.id.magnitude_text_view);
