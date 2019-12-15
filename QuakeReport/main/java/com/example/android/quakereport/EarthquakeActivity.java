@@ -16,10 +16,15 @@
 package com.example.android.quakereport;
 
 import android.app.DownloadManager;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -34,7 +39,7 @@ public class EarthquakeActivity extends AppCompatActivity {
         setContentView(R.layout.earthquake_activity);
 
         // Create a fake list of earthquake locations.
-        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
+        final ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
 //        earthquakes.add(new Earthquake("7.2","San Francisco","Feb 2,2016"));
 //        earthquakes.add(new Earthquake("6.1","London","Jul 20,2015"));
 //        earthquakes.add(new Earthquake("3.9","Tokyo","Nov 10,2014"));
@@ -44,7 +49,7 @@ public class EarthquakeActivity extends AppCompatActivity {
 //        earthquakes.add(new Earthquake("1.6","Paris","Oct 30,2011"));
 
         // Find a reference to the {@link ListView} in the layout
-        ListView earthquakeListView = findViewById(R.id.list);
+        final ListView earthquakeListView = findViewById(R.id.list);
 
         // Create a new {@link ArrayAdapter} of earthquakes
         WordsAdapter adapter = new WordsAdapter(this,earthquakes);
@@ -53,5 +58,25 @@ public class EarthquakeActivity extends AppCompatActivity {
         // so the list can be populated in the user interface
         earthquakeListView.setAdapter(adapter);
 
+        earthquakeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Earthquake currentWord = earthquakes.get(position);
+
+                String url = currentWord.getUrl();
+
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+
+                intent.setData(Uri.parse(url));
+
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 }

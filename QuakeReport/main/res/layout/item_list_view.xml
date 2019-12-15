@@ -8,28 +8,65 @@
 
     <TextView
         android:id="@+id/magnitude_text_view"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:textSize="20sp"
-        android:layout_height="wrap_content"
-        android:textColor="#ff0000"
+        android:layout_width="36dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:background="@drawable/magnitude_circle"
+        android:layout_height="36dp"
+        android:textColor="#ffffff"
         android:textStyle="bold"
         tools:text="7.2" />
 
-    <TextView
-        android:id="@+id/location_text_view"
+    <LinearLayout
+        android:id="@+id/location_linear_layout"
         android:layout_width="0dp"
         android:layout_weight="2"
-        android:textSize="25sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_height="wrap_content"
-        tools:text="South Francisco" />
+        android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/date_text_view"
+        <TextView
+            android:id="@+id/offset_text_view"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"
+            tools:text="74km NW of" />
+
+        <TextView
+            android:id="@+id/location_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            tools:text="San Francisco"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/date_linear_layout"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:textSize="15sp"
         android:layout_height="wrap_content"
-        tools:text="Oct 30,2011" />
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/date_text_view"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:layout_height="wrap_content"
+            tools:text="Oct 30, 2011" />
+
+        <TextView
+            android:id="@+id/time_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            tools:text="12:30 AM"/>
+
+    </LinearLayout>
 
 </LinearLayout>
