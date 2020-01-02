@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/counterConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66BB6A"
+        tools:context=".CounterFragment">
+
+        <TextView
+            android:id="@+id/teamAText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/teamAScoreText"
+            app:layout_constraintEnd_toStartOf="@+id/teamBText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Team A Name" />
+
+        <TextView
+            android:id="@+id/teamBText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/teamBScoreText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/teamAText"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Team B Name" />
+
+        <TextView
+            android:id="@+id/teamAScoreText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/startScore"
+            android:textColor="#FFFFFF"
+            android:textSize="90sp"
+            app:layout_constraintBottom_toTopOf="@+id/plusThreeBtnA"
+            app:layout_constraintEnd_toStartOf="@+id/teamBScoreText"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/teamAText" />
+
+        <TextView
+            android:id="@+id/teamBScoreText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/startScore"
+            android:textColor="#FFFFFF"
+            android:textSize="90sp"
+            app:layout_constraintBottom_toTopOf="@+id/plusThreeBtnB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/teamAScoreText"
+            app:layout_constraintTop_toBottomOf="@+id/teamBText" />
+
+        <Button
+            android:id="@+id/plusThreeBtnA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:text="@string/plusThreeBtn"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/plusTwoBtnA"
+            app:layout_constraintEnd_toEndOf="@+id/teamAScoreText"
+            app:layout_constraintStart_toStartOf="@+id/teamAScoreText"
+            app:layout_constraintTop_toBottomOf="@+id/teamAScoreText" />
+
+        <Button
+            android:id="@+id/plusThreeBtnB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:text="@string/plusThreeBtn"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/plusTwoBtnB"
+            app:layout_constraintEnd_toEndOf="@+id/teamBScoreText"
+            app:layout_constraintStart_toStartOf="@+id/teamBScoreText"
+            app:layout_constraintTop_toBottomOf="@+id/teamBScoreText" />
+
+        <Button
+            android:id="@+id/plusTwoBtnA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:text="@string/plusTwoBtn"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/plusOneBtnA"
+            app:layout_constraintEnd_toEndOf="@+id/plusThreeBtnA"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plusThreeBtnA" />
+
+        <Button
+            android:id="@+id/plusTwoBtnB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:text="@string/plusTwoBtn"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/plusOneBtnB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/plusThreeBtnB"
+            app:layout_constraintTop_toBottomOf="@+id/plusThreeBtnB" />
+
+        <Button
+            android:id="@+id/plusOneBtnA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:text="@string/plusOneBtn"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+            app:layout_constraintEnd_toEndOf="@+id/plusTwoBtnA"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plusTwoBtnA" />
+
+        <Button
+            android:id="@+id/plusOneBtnB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:text="@string/plusOneBtn"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/plusTwoBtnB"
+            app:layout_constraintTop_toBottomOf="@+id/plusTwoBtnB" />
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="162dp"
+            android:layout_marginEnd="161dp"
+            android:layout_marginBottom="16dp"
+            android:background="#FFE082"
+            android:foregroundGravity="bottom|center"
+            android:text="@string/resetBtn"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

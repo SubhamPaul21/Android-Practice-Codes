@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Score Counter</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcomeText">Welcome to the Game Score Counter</string>
+    <string name="teamAHintText">Enter the name of Team A</string>
+    <string name="teamBHintText">Enter the name of Team B</string>
+    <string name="btnText">Start</string>
+    <string name="plusThreeBtn">+3 Points</string>
+    <string name="plusTwoBtn">+2 Points</string>
+    <string name="plusOneBtn">+1 Points</string>
+    <string name="resetBtn">Reset</string>
+    <string name="teamA">Team A</string>
+    <string name="teamB">Team B</string>
+    <string name="startScore">0</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.scorecounter.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeToCounter"
+            app:destination="@id/counterFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/counterFragment"
+        android:name="com.example.scorecounter.CounterFragment"
+        android:label="fragment_counter"
+        tools:layout="@layout/fragment_counter" >
+        <argument
+            android:name="team_A_name"
+            app:argType="string" />
+        <argument
+            android:name="team_B_name"
+            app:argType="string" />
+    </fragment>
+</navigation>
