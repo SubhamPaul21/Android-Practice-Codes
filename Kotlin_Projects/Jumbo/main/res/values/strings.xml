@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">The Jumbo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcomeText">Hello There, Welcome to The Jumbo App</string>
+    <string name="order_coffee">Order Coffee</string>
+    <string name="funBoxesBtn">Fun Boxes</string>
+    <string name="quakeReportBtn">Quake Report</string>
+    <string name="toppingLabel">toppings</string>
+    <string name="nameHint">Enter your name</string>
+    <string name="emailHint">Enter your email ID</string>
+    <string name="whippedCream">Whipped Cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="quantityLabel">Quantity</string>
+    <string name="minusButton">-</string>
+    <string name="plusButton">+</string>
+    <string name="orderBtn">Order</string>
+</resources>
