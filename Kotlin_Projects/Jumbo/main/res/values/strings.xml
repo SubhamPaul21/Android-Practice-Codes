@@ -16,4 +16,10 @@
     <string name="minusButton">-</string>
     <string name="plusButton">+</string>
     <string name="orderBtn">Order</string>
+    <string name="max_coffee_quantity">99</string>
+    <string name="minimum_coffee_quantity">1</string>
+    <string name="initial_coffee_quantity">1</string>
+    <string name="magnitude_image_description">the magnitude value of the earthquake</string>
+    <string name="about_page_description">Welcome to the Jumbo application where you can Order Coffee and send summary mails using Explicit Intent mechanism. You can play with coloring boxes in the Fun Boxes game which is really fun and last but not the least, you can check the Earthquake report of different locations which is made using Recycler View and View Holder that makes it Android friendly and reduces memory consumption to the least.</string>
+    <string name="about_menu_title">About</string>
 </resources>

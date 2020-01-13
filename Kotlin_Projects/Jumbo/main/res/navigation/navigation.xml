@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.example.thejumbo.WelcomeFragment"
-        android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" >
+        android:label="The Jumbo"
+        tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcomeFragment_to_orderCoffeeFragment"
             app:destination="@id/orderCoffeeFragment" />
@@ -23,16 +23,21 @@
     <fragment
         android:id="@+id/orderCoffeeFragment"
         android:name="com.example.thejumbo.OrderCoffeeFragment"
-        android:label="fragment_order_coffee"
+        android:label="Order Coffee"
         tools:layout="@layout/fragment_order_coffee" />
     <fragment
         android:id="@+id/funBoxesFragment"
         android:name="com.example.thejumbo.FunBoxesFragment"
-        android:label="fragment_fun_boxes"
+        android:label="Fun Boxes"
         tools:layout="@layout/fragment_fun_boxes" />
     <fragment
         android:id="@+id/quakeReportFragment"
         android:name="com.example.thejumbo.QuakeReportFragment"
-        android:label="fragment_quake_report"
+        android:label="EarthQuake Report"
         tools:layout="@layout/fragment_quake_report" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.thejumbo.AboutFragment"
+        android:label="About Jumbo"
+        tools:layout="@layout/fragment_about" />
 </navigation>
