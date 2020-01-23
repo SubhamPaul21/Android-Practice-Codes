@@ -75,7 +75,7 @@ class OrderCoffeeFragment : Fragment() {
             }
             val totalPrice: Int = basePrice * numberOfCoffee()
 
-            return "Name: ${nameEditText.text.toString().capitalize()}\nEmail: ${emailEditText.text}\n" +
+            return "Name: ${nameEditText.text}\nEmail: ${emailEditText.text}\n" +
                     "Number of Coffee's Ordered: ${numberOfCoffee()}\nWhipped Cream: ${hasWhippedCream()}\n" +
                     "Chocolate: ${hasChocolate()}\nTotal Price: $totalPrice"
         }
@@ -83,19 +83,14 @@ class OrderCoffeeFragment : Fragment() {
         fun composeEmail(body: String) {
             val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
                 data =
-                    Uri.parse("mailto:${emailEditText.text}") // only email apps should handle this
-                //type = "text/plain"
+                    Uri.parse("mailto:") // only email apps should handle this
                 putExtra(Intent.EXTRA_SUBJECT, "Your Coffee Order from The Jumbo App")
+                putExtra(Intent.EXTRA_EMAIL, arrayOf(emailEditText.text.toString()))
                 putExtra(Intent.EXTRA_TEXT, body)
             }
-            if (emailIntent.resolveActivity(context!!.packageManager) != null) {
 
-                startActivity(
-                    Intent.createChooser(
-                        emailIntent,
-                        "Select the email provider below: "
-                    )
-                )
+            if (emailIntent.resolveActivity(activity!!.packageManager) != null) {
+                startActivity(emailIntent)
             }
         }
 

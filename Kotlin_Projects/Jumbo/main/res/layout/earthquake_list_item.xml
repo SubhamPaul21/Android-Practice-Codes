@@ -35,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/offsetTextView"
         android:layout_toEndOf="@id/magnitudeTextView"
-        android:textSize="18sp"
         android:textColor="#000"
+        android:textSize="18sp"
         android:textStyle="bold"
         tools:text="Pacific-Antartic Ridge" />
 
@@ -44,19 +44,19 @@
         android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="10dp"
+        android:textSize="15sp"
         tools:text="Jan 30, 2016" />
 
     <TextView
         android:id="@+id/timeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
         android:layout_below="@id/dateTextView"
         android:layout_alignStart="@id/dateTextView"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="10dp"
+        android:textSize="15sp"
         tools:text="8:55 AM" />
 </RelativeLayout>

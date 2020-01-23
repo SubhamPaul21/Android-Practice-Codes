@@ -22,4 +22,15 @@
     <string name="magnitude_image_description">the magnitude value of the earthquake</string>
     <string name="about_page_description">Welcome to the Jumbo application where you can Order Coffee and send summary mails using Explicit Intent mechanism. You can play with coloring boxes in the Fun Boxes game which is really fun and last but not the least, you can check the Earthquake report of different locations which is made using Recycler View and View Holder that makes it Android friendly and reduces memory consumption to the least.</string>
     <string name="about_menu_title">About</string>
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_phrases">Phrases</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_colors">Colors</string>
+
+    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
+    <string name="category_numbers">Numbers</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_family">Family Members</string>
 </resources>

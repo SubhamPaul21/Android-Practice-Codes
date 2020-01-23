@@ -2,11 +2,10 @@ package com.example.thejumbo
 
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import kotlinx.android.synthetic.main.fragment_welcome.*
 
 /**
@@ -19,7 +18,8 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_welcome, container,false)
+        setHasOptionsMenu(true)
+        return inflater.inflate(R.layout.fragment_welcome, container, false)
 
     }
 
@@ -27,15 +27,30 @@ class WelcomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         orderCoffeeBtn.setOnClickListener {
-            it.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToOrderCoffeeFragment())
+            it.findNavController()
+                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToOrderCoffeeFragment())
         }
 
         funBoxesBtn.setOnClickListener {
-            it.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToFunBoxesFragment())
+            it.findNavController()
+                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToFunBoxesFragment())
         }
 
         quakeReportBtn.setOnClickListener {
-            it.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToQuakeReportFragment())
+            it.findNavController()
+                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToQuakeReportFragment())
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.nav_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(
+            item,
+            view!!.findNavController()
+        ) || super.onOptionsItemSelected(item)
     }
 }

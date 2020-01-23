@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/orderCoffeeFragment"
+        android:title="@string/order_coffee" />
+    <item
+        android:id="@+id/funBoxesFragment"
+        android:title="@string/funBoxesBtn" />
+    <item
+        android:id="@+id/quakeReportFragment"
+        android:title="@string/quakeReportBtn" />
+</menu>
